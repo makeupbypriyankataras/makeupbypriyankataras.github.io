@@ -9,6 +9,7 @@
     * {
       margin: 0; padding: 0; box-sizing: border-box;
       font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
     }
     body {
       background-color: #fff8f5;
@@ -22,6 +23,9 @@
       justify-content: space-between;
       align-items: center;
       box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
     .logo img {
       height: 60px;
@@ -46,6 +50,11 @@
       background: rgba(0, 0, 0, 0.5);
       padding: 20px;
       border-radius: 10px;
+      animation: fadeIn 2s ease-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
     section {
       padding: 60px 40px;
@@ -69,17 +78,28 @@
     .portfolio-images img {
       width: 100%;
       border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+    .portfolio-images img:hover {
+      transform: scale(1.05);
     }
     .contact-info p, .contact-info a {
       margin-bottom: 10px;
       display: block;
+      color: #333;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #fbeaf3;
+      color: #888;
     }
   </style>
 </head>
 <body>
   <header>
     <div class="logo">
-      <img src="https://i.imgur.com/Fg9AKlT.png" alt="Priyanka Taras Logo">
+      <img src="https://raw.githubusercontent.com/iyankataras/iyankataras.github.io/main/pt%20logo_20250709_152718_0000.png" alt="Priyanka Taras Logo">
     </div>
     <nav>
       <a href="#about">About</a>
@@ -112,11 +132,10 @@
   <section id="portfolio">
     <h2 class="section-title">Portfolio</h2>
     <div class="portfolio-images">
-      <img src="https://i.imgur.com/8XsI0bV.jpg" alt="Makeup 1">
-      <img src="https://i.imgur.com/krQbF1x.jpg" alt="Makeup 2">
-      <img src="https://i.imgur.com/djYd5UC.jpg" alt="Makeup 3">
-      <img src="https://i.imgur.com/h4LjO3n.jpg" alt="Makeup 4">
-      <img src="https://i.imgur.com/mGzVGzN.jpg" alt="Makeup 5">
+      <img src="https://via.placeholder.com/300x400?text=Makeup+1" alt="Makeup 1">
+      <img src="https://via.placeholder.com/300x400?text=Makeup+2" alt="Makeup 2">
+      <img src="https://via.placeholder.com/300x400?text=Makeup+3" alt="Makeup 3">
+      <img src="https://via.placeholder.com/300x400?text=Makeup+4" alt="Makeup 4">
     </div>
   </section>
 
@@ -129,5 +148,9 @@
       <p><strong>Email:</strong> priyankamakeup@example.com</p>
     </div>
   </section>
+
+  <footer>
+    © 2025 Makeup by Priyanka Taras. All rights reserved.
+  </footer>
 </body>
 </html>
